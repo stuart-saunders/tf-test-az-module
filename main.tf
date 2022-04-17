@@ -3,7 +3,7 @@ resource "azurerm_resource_group" "this" {
   location = var.location
 }
 
-module "linux-vm" {
+module "linux_vm" {
   source  = "./modules/linux-vm"
   vm_name = "linux-vm"
 
@@ -13,7 +13,7 @@ module "linux-vm" {
   resource_group_name   = azurerm_resource_group.this.name
 }
 
-module "win-vm" {
+module "win_vm" {
   source  = "./modules/windows-vm"
   vm_name = "win-vm"
 
